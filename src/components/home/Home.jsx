@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import {AnimatePresence} from 'framer-motion'
 // Page Css
 import './Home.css';
 import { Link } from "react-router-dom";
@@ -21,9 +20,9 @@ function Home () {
         <section id="homePage">
             <div className="homeSlider">
                 <div className="wrapper">
-                    <AnimatePresence>
+                    {/* <AnimatePresence> */}
                         <h1 className="mainheading">Bounty Hunter</h1>
-                    </AnimatePresence>
+                    {/* </AnimatePresence> */}
                     <div className="slider-btnOuter">
                         <Link to={'/'} className="custom-btn-dark">Play Game</Link>
                         <Link to={'/'} className="custom-btn-light">Become A Partner</Link>
