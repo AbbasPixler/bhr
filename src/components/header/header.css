@@ -1,0 +1,249 @@
+header{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+}
+/* header::before{
+    content: '';
+    position: absolute;
+    background-image: url('../../assets/header-border.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+} */
+header::before, header::after{
+    content: '';
+    position: absolute;
+    background-image: url('../../assets/header-img/left-side-border.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    bottom: 0;
+    left: 0;
+    height: 0.8vw;
+    width: 63vw;
+}
+header::after{
+    background-image: url('../../assets/header-img/right-side-border.svg');
+    left: unset;
+    right: 0;
+}
+.wrapper{
+    max-width: 75%;
+    margin: 0 auto;
+    width: 100%;
+}
+.menus{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+.menus ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-gap: 20px;
+}
+.menus ul li a:hover{
+    opacity: 1;
+}
+.menus ul li a, .loginInfo a {
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: unset;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+.loginInfo a{
+    opacity: 1;
+}
+.loginInfo{
+    display: flex;
+    column-gap: 10px;
+    margin-left: 20px;
+}
+.loginInfo .language, .loginbtn, .walletbtn{
+    background-image: url('../../assets/login-btn-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+.loginInfo .language a, .loginbtn a, .walletbtn a{
+    font-size: 16px;
+}
+.loginInfo .loginbtn{
+    background-image: url('../../assets/log-inbg.png');
+    width: 70px;
+    height: 40px;
+}
+.loginInfo .walletbtn{
+    background-image: url('../../assets/wallet-bg.png');
+    width: 70px;
+    height: 40px;
+}
+.loginbtn a{
+    color: #000;
+}
+.walletbtn a, .language a{
+    color: #ffc700;
+}
+.loginInfo .loginbtn, .loginInfo .walletbtn{
+    width: 100px;
+}
+
+/* @media screen and (min-width: 1600px) {
+    header{
+        height: 90px;
+    }
+    header::before{
+        content: '';
+        position: absolute;
+        background-image: url('../../assets/header-border.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100%;
+        width: 1680px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        margin: 0 auto;
+        z-index: -1;
+    }
+    .menus ul{
+        column-gap: 20px;
+    }
+    .menus ul li a, .loginInfo a{
+        font-size: 22px;
+    }
+    .loginInfo{
+        column-gap: 10px;
+        margin-left: 20px;
+    }
+    .loginInfo .language, .loginbtn, .walletbtn{
+        width: 50px;
+    }
+    .loginInfo .loginbtn, .loginInfo .walletbtn{
+        width: 100px;
+    }
+} */
+.headerMobile{
+    display: none;
+}
+.headerMobile .menus{
+    justify-content: center;
+    position: relative;
+}
+.headerMobile .menus ul{
+    width: 100%;
+}
+.headerMobile .menus ul li:nth-child(1){
+    width: 100%;
+    text-align: center;
+}
+.headerMobile .menus ul li:nth-child(2){
+    margin-left: auto;
+}
+.mobileMenu{
+    height: 100vh;
+    background-color: #101010;
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    width: 20%;
+    padding: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.mobileMenu ul{
+    display: inline-block;
+}
+.mobileMenu ul li{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.mobileMenu .loginInfo{
+    flex-wrap: wrap;
+}
+.mobileMenu .loginInfo .language, .mobileMenu .loginInfo .loginbtn, .mobileMenu .loginInfo .walletbtn{
+    width: 100%;
+    margin-bottom: 15px;
+}
+button{
+    background-color: unset;
+    border: unset;
+}
+@media screen and (max-width: 1200px) {
+    header::before{
+        background-size: cover;
+    }
+}
+@media screen and (max-width: 800px) {
+    .wrapper{
+        max-width: 100%;
+        margin: unset;
+    }
+    header{
+        display: none;
+    }
+    header.headerMobile{
+        display: inline-flex;
+        width: 100%;
+        overflow: hidden;
+    }
+    header::before{
+        background-size: contain;
+    }
+    .headerMobile .menus ul li:nth-child(2) {
+        position: relative;
+        right: 80px;
+    }
+    .mobileMenu{
+        right: -220px;
+        z-index: 999;
+    }
+    header.headerMobile.show{
+        overflow: unset;
+    }
+    header.headerMobile.show .mobileMenu{
+        right: -0px;
+        width: 30%;
+    }
+    .headerMobile .mobileMenu ul li:nth-child(2){
+        position: unset;
+    }
+    .closeBtn{
+        color: #fff;
+        font-size: 10px;
+        border: 1px solid #ffc700;
+        border-radius: 50px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    
+}   

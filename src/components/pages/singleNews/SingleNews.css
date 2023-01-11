@@ -1,0 +1,134 @@
+p, h2, h3, h4,a{
+    font-weight: 500;
+}
+.newsInnerWrapper{
+    width: 70%;
+    margin: 0 auto;
+}
+.singlePagebanner{
+    height: 250px;
+    width: 100%;
+}
+.newsInnerWrapper img{
+    width: 100%;
+}
+.pageTitle h3{
+    text-align: center;
+    color: #fff;
+    font-size: 45px;
+    letter-spacing: 0.05em;
+    margin: 40px 0;
+}
+.newsheading{
+    display: flex;
+    align-items: flex-end;
+    column-gap: 8px;
+}
+.newsheading h4{
+    color: #fff;
+    letter-spacing: 0.05em;
+    font-size: 20px;
+    margin: 30px 0 0;
+    text-decoration: underline;
+}
+.newsheading span{
+    color: #fff;
+    font-size: 14px;
+}
+.newsContent ul{
+    padding-left: 15px;
+}
+.newsContent ul li, .newsContent p{
+    font-size: 13px;
+    font-family: Roboto;
+    line-height: 20px;
+    color: #fff;
+}
+.newsContent p{
+    margin-top: 30px;
+}
+.readMoreHeading{
+    margin-bottom: 15px;
+}
+.readMoreHeading h4{
+    color: #F4C625;
+    text-decoration: unset;
+}
+.readMoreOuter{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 2%;
+}
+.readMoreOuter .readMoreCol{
+    width: 48%;
+    display: inline-block;
+    position: relative;
+}
+.readMoreOuter .readMoreCol .readMoreContent{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.readMoreOuter .readMoreCol .readMoreContent span{
+    width: 100%;
+    text-align: right;
+    display: block;
+    color: #F4C625;
+}
+.readMoreOuter .readMoreCol .readMoreContent h3{
+    color: #F4C625;
+    text-decoration: underline;
+    margin-bottom: 0;
+    font-size: 25px;
+}
+.backBtn{
+    margin-bottom: 15px;
+}
+.backBtn a{
+    text-decoration: unset;
+    color: #fff;
+    font-family: Roboto;
+}
+.backBtn a img{
+    width: auto;
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 600px){
+    .pageTitle h3{
+        margin: 20px 0;
+        font-size: 30px;
+    }
+    .readMoreOuter .readMoreCol{
+        width: 100%;
+    }
+    .readMoreOuter .readMoreCol .readMoreContent h3{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .newsInnerWrapper img{
+        height: 100%;
+    }
+}
+@media screen and (max-width: 800px){
+    .newsInnerWrapper{
+        width: 100%;
+    }
+    .backBtn, .newsheading, .newsContent{
+        padding: 0 20px;
+    }
+    .singlePagebanner{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .readMoreSection{
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,113 @@
+footer{
+    background-image: url('../../assets/footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+.footerInnerOuter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footerCol{
+    width: 30%;
+}
+.footerCol p{
+    font-family: roboto;
+    color: rgba(244, 198, 37, 0.6);
+    line-height: 20px;
+    font-size: 14px;
+    margin: 25px 90px 25px 0;
+}
+.footer-btnGrup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-btnGrup .footerBtn{
+    background-image: url('../../assets/footer-btn-bg.png');
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: unset;
+    color: #f4c625;
+}
+.socialIcon{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.footerColSec{
+    width: 12%;
+}
+.footerColSec h3{
+    color: #f4c625;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.footerColSec ul{
+    padding: 0;
+    list-style: none;
+}
+.footerColSec ul li{
+    margin-bottom: 8px;
+}
+.footerColSec ul li a{
+    text-decoration: unset;
+    color: rgba(244, 198, 37, 0.6);
+    line-height: 20px;
+    font-family: Roboto;
+}
+@media screen and (max-width: 1440px){
+    .footerCol{
+        width: 40%;
+    }
+    .footerColSec{
+        width: 15%;
+    }
+}
+@media screen and (max-width: 800px){
+    .footerCol{
+        text-align: center;
+        width: 100%;
+        margin-top: 100px;
+        padding: 0 20px;
+    }
+    .footerColSec {
+        width: 25%;
+        margin-top: 40px;
+    }
+    footer{
+        height: auto;
+    }
+    .footerCol p{
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 600px){ 
+    .footerColSec{
+        width: 100%;
+    }
+    .footer-btnGrup{
+        justify-content: center;
+    }
+    .socialIcon{
+        width: 100%;
+        margin-top: 30px;
+        justify-content: center;
+    }
+    .footerColSec{
+        margin-top: 30px;
+    }
+}
